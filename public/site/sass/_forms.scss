@@ -1,0 +1,122 @@
+$margin: 10px;
+.richiedi-info-dialog-wrapper {
+    position: fixed;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 20px;
+    .richiedi-close-icon {
+        display: flex;
+        justify-content: flex-end;
+        i {
+            cursor: pointer;
+        }
+    }
+}
+.valuta-form {
+    margin: 0 auto;
+    &.richiedi-info-dialog {
+        background-color: white;
+    }
+    input.no-border {
+        outline: 0;
+        border: none;
+    }
+    .input-euro {
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 0;
+            content:"€";
+            color: rgba($secondary,0.5);
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        &.right {
+            input {
+                padding-right:20px;
+                text-align:end;
+            }
+            &:before {
+                right: 5px;
+            }
+        }
+    }
+
+    .cls-form-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+
+        .cls-form-col-1, .cls-form-col-2 {
+            width: calc(50% - #{$margin} / 2);
+        }
+
+        .cls-form-item {
+            &:not(:last-child) {
+                margin-right: $margin;
+            }
+
+            .checkbox-group {
+                height: 48px;
+            }
+        }
+
+    }
+
+    .btn {
+        max-width: 200px;
+    }
+
+    &.do-option-form{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        .cls-form-file {
+            position: relative;
+            justify-content: center;
+            label {
+                display: inline-flex;
+                align-items: center;
+            }
+            input[type="file"] {
+                //width: 100%;
+                position: absolute;
+                top:0;
+                left: 0;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
+
+.cls-select-wrapper {
+    position: relative;
+
+    .cls-select {
+        border: 1px solid $secondary;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 100%;
+        background-color: $primary;
+        z-index: -1;
+        border: 1px solid $secondary;
+        border-radius: 5px;
+    }
+}
+
+

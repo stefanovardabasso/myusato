@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product>
+    <property Portatadaa="2000"/>
+    <property Baricentrocaricoinmm="500"/>
+    <property Marca="YALE"/>
+    <property Modello="ERP20VF FWB"/>
+    <property Tipomontante="PFL"/>
+    <property Alltezzadisollevamentoinmm="3392"/>
+    <property Tipodistributore="LEVE MECCANICHE"/>
+    <property ncomandidistributore="4"/>
+    <property Inversionemarcia="INTERRUTTORE"/>
+    <property Tipofreni="BAGNO OLIO"/>
+    <property Tipogomme="SUPERELASTICHE"/>
+    <property Assaleanteriore="STANDARD"/>
+    <property VoltaggiobatteriainV="12"/>
+    <property Tipo="STANDARD"/>
+    <property Traslatore="TRASLATORE"/>
+    <property Forche="SI"/>
+    <property Lunghezzaforcheinmm="1000"/>
+    <property AccessoriCarrelli="SENZA CABINA"/>
+    <property Versione="STANDARD"/>
+    <property Targapercircolazione="NO"/>
+  </product>
+</products>

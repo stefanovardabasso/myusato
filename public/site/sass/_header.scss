@@ -1,0 +1,56 @@
+.header {
+    .top-bar {
+        .top-menu {
+            letter-spacing: 1px;
+            .login-icon {
+                font-size: 20px !important;
+            }
+        }
+        .cls-header-acc-wrapper {
+            position: relative;
+            .cls-header-acc-dropdown {
+                overflow: hidden;
+                position: absolute;
+                max-height: 0;
+                top: 100%;
+                left: 0;
+                z-index: 1;
+                background: $primary;
+                transition: max-height cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+
+                ul {
+                    position: relative;
+                    padding: 15px 5px;
+
+                    li {
+                        padding: 5px 0;
+                        &:after {
+                            content: unset;
+                        }
+                        &:hover {
+                            .label {
+                            text-decoration: underline;
+                            }
+                            cursor: pointer;
+                        }
+                    }
+
+                    &:not(:last-child):after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: $secondary;
+                    }
+                }
+            }
+            &.cls-acc-active .cls-header-acc-dropdown {
+                max-height: 300px;
+                transition: max-height cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+
+            }
+        }
+    }
+}

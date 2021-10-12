@@ -1,0 +1,12 @@
+#filters {
+    select {
+        margin-bottom: 30px;
+    }
+}
+
+.cls-filter-button {
+    &.active {
+        background-color:#2d2d2d;
+        color:#ffcb0f !important;
+    }
+}

@@ -1,0 +1,58 @@
+/* @font-face {
+  font-family: Proxima Nova;
+  font-weight: 400;
+  src: url(/fonts/proxima-nova/400-regular.woff) format("woff");
+} */
+
+// Fonts
+$body-font-size: 16px;
+$body-font-weight: 500;
+$body-font-family: "Poppins", sans-serif;
+$heading-font-family: "Poppins", sans-serif;
+
+// Colors
+$primary: #ffcb0f;
+$secondary: #2d2d2d;
+$dark: #2d2d2d;
+$light: #fff;
+
+// Texts
+$text-main-color: #2d2d2d;
+$text-secondary-color: #7E7E7E;
+$text-light-color: #fff;
+$text-error-color: #F85E00;
+$text-success-color: #69995D;
+
+// <a> Style
+a {
+  text-decoration: none;
+  color: $text-main-color;
+}
+
+// Input parameters
+$input-height: 48px;
+$input-background: $light;
+$input-border-radius: 0;
+$input-text-transform: uppercase;
+
+// Checkbox parameters
+$checkbox-radius: 0;
+$checkbox-width: 28px;
+$checkbox-height: 28px;
+$checkbox-border-color: $primary;
+$checkbox-icon-color: $dark;
+$checkbox-icon-size: 21px;
+
+// Select parameters
+$select-height: 48px;
+$select-border-color: $light;
+$select-border-radius: 0;
+$select-background: $light;
+$select-text-color: $text-main-color;
+$select-arrow-line-height: 11px;
+
+// Button parameters
+$button-height: 48px;
+$button-background: $primary;
+$button-border-radius: 50px;
+$button-text-transform: uppercase;

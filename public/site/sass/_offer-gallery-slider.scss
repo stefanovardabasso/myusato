@@ -1,0 +1,12 @@
+#offer-gallery-thumbnails {
+    &>div {
+        > img {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &:not(.tns-nav-active) {
+            opacity: .6;
+        }
+    }
+}

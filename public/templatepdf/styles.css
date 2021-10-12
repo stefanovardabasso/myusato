@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+html, body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color:#787575;
+}
+a {
+    text-decoration: none;
+}
+a:visited, a:link {
+    color:#787575;
+}
+.container {
+    height: auto;
+    width: 100wh;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: white;
+    column-gap:10px;
+}
+.left-column {
+    order:1;
+    flex-basis: 18%;
+    background-color: rgb(254, 223, 107);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left-column > p {
+    font-size: 0.8em;
+}
+.left-column > img {
+    margin-top: 3%;
+}
+.right-column {
+    order:2;
+    flex-basis: 82%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.header > img {
+    width:200px;
+    align-self: flex-end;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+.header > p {
+    width: 380px;
+    font-size: 1.2rem;
+}
+.p-big-font {
+    font-size: 1.3rem !important;
+}
+#cls-logo {
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+#hyster-img {
+    align-self:center;
+    width: 60%;
+}
+.row-div {
+    display: flex;
+    flex-direction: row;
+    gap:3rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+div.row-div > :first-child {
+    box-sizing: border-box;
+    width: 15%;
+}
+h2 {
+    color:red;
+    font-weight: bold;
+}
+.white-strip1 {
+    height: 410px;
+    width: 88%;
+    background-color: white;
+    align-self: flex-end;
+}
+.white-strip2 {
+    height: 300px;
+    width: 88%;
+    background-color: white;
+    align-self: flex-end;
+    margin-top: auto;
+}

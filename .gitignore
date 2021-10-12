@@ -1,0 +1,24 @@
+/node_modules
+/public/hot
+/public/storage
+/public/.htaccess
+/storage/*.key
+/vendor
+/.idea
+/.vscode
+/nbproject
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+.phpunit.result.cache
+/vendor/
+.env
+<<<<<<< Updated upstream
+.env
+=======
+.env.prod
+.env.dev
+>>>>>>> Stashed changes
