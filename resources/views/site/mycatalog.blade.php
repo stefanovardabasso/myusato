@@ -36,6 +36,7 @@
 @else
 
     @if(count($singleoff) > 0)
+        <BR>
 <div class="container px-15 md_px-0">
     <h2 class="section-title">Offerte</h2>
 
@@ -55,7 +56,9 @@
                            <a data-offer-id="{{$off->id_offert}}" href="{{ route('deletemycatalog',['idoffert' => $off->id_offert]) }}" class="ad-add absolute top-10 right-10 z-10">
                                <i class="material-icons font-30">delete</i>
                            </a>
+                         @if(isset($imgoff[$off->id_offert]->name))
                          <img src={{ url('upload/' . $imgoff[$off->id_offert]->name)}}  alt="">
+                             @endif
                      </div>
                      <div class="ad-titles">
                          <ul class="text-primary bc-secondary p-15">

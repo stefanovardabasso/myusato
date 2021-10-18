@@ -184,7 +184,7 @@
                         <strong><em>{{__('Totale')}}</em></strong>
                     </td>
                     <td style="width: 50%">
-                        <span class="input-euro right"><input style="width: 100px; font-weight: bold; font-style: italic" class="no-border" name="price_"></span>
+                        <span class="input-euro right"><input style="width: 100px; font-weight: bold; font-style: italic" required class="no-border" name="price_"></span>
                     </td>
                 </tr>
                 </tbody>

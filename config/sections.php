@@ -121,8 +121,8 @@ return [
     ],
     /* crud:create add section */
     [
-        'label' => "__('Vendorbadges')",
-        'permission_target' => 'vendorbadges',
+        'label' => "__('Blocksoftexts')",
+        'permission_target' => 'blocksoftexts',
         'permissions' => [
             'create' => "__('create-permission')",
             'view_all' => "__('view_all-permission')",

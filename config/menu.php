@@ -74,6 +74,12 @@ return [
                     'icon' => 'fa fa-code',
                     'route' => 'admin.newsl'
                 ],
+                [
+                    'type' => 'link',
+                    'title' => "__('Testi')",
+                    'icon' => 'fa fa-code',
+                    'route' => 'admin.blocksoftexts.index'
+                ],
 
             ]
         ],
@@ -106,7 +112,7 @@ return [
                         ],
                         [
                             'type' => 'link',
-                            'title' => "__('Quotazioni')",
+                            'title' => "__('QuotazionI')",
                             'icon' => 'fa fa-question',
                             'route' => 'admin.quotations.index'
                         ],
@@ -156,7 +162,7 @@ return [
                         ],
                         [
                             'type' => 'link',
-                            'title' => "__('Amministratori B')",
+                            'title' => "__('Assistenza backoffice')",
                             'icon' => 'fa fa-users',
                             'route' => 'admin.musers.amministratorib'
                         ],
@@ -168,7 +174,7 @@ return [
                         ],
                         [
                             'type' => 'link',
-                            'title' => "__('Venditori AV')",
+                            'title' => "__('Venditori avanzati')",
                             'icon' => 'fa fa-users',
                             'route' => 'admin.musers.venditoriav'
                         ],

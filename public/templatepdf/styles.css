@@ -1,18 +1,14 @@
 @font-face {
     font-family: 'Roboto';
-    src: url('fonts/Roboto-Regular.ttf');
+    src: url('https://myusato.cls.it/templatepdf/fonts/Roboto-Regular.ttf');
 }
 @font-face {
     font-family: 'Roboto';
-    src: url('fonts/Roboto-Bold.ttf');
+    src: url('https://myusato.cls.it/templatepdf/fonts/Roboto-Bold.ttf');
     font-weight: bold;
 }
 html, body {
-    margin:0;
-    padding:0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    color:#787575;
+    margin:0; padding:0; font-family: 'Roboto', sans-serif; font-size: 22px; color:#787575;
 }
 a {
     text-decoration: none;
@@ -73,12 +69,12 @@ a:visited, a:link {
 .p-big-font {
     font-size: 1.3rem !important;
 }
-#cls-logo {
+.cls-logo {
     width: 100%;
     margin-top: 15%;
     margin-bottom: 10%;
 }
-#hyster-img {
+.hyster-img {
     align-self:center;
     width: 60%;
 }

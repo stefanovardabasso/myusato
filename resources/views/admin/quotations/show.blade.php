@@ -20,10 +20,10 @@
                         </tr>
                         <tr>
                             <th>{{ __('Titolo') }}</th>
-                            <td field-key='id_user'>{{ $user->title }}</td>
+                            <td field-key='id_user'>{{ $quotation->title }}</td>
 
                             <th>{{ __('Messaggio') }}</th>
-                            <td field-key='id_user'>{{ $user->text }}</td>
+                            <td field-key='id_user'>{{ $quotation->text }}</td>
                         </tr>
                     </table>
 

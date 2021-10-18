@@ -9,7 +9,12 @@
     @include('partials._alerts')
 
 
-    @include('admin.datatables.partials._template', [ 'dataTableObject' => $dataTableObject ])
+    @include('admin.datatables._datatable', [
+         'dataTableObject' => $dataTableObject,
+         'permissionClass' => \App\Models\Admin\Moreinfo::class,
+         'routeNamespace' => 'moreinfos'
+     ])
+
 
 
 @stop

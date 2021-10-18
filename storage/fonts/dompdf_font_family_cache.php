@@ -78,15 +78,6 @@
     'normal' => $rootDir . '/lib/fonts/DejaVuSerif',
   ),
   'poppins' => array(
-    'italic' => $fontDir . '/poppins_italic_1d694924317a4790716336eefe6b364c',
-    '500_italic' => $fontDir . '/poppins_500_italic_88b88e7ee0fd98a6547d793755458e47',
-    'bold_italic' => $fontDir . '/poppins_bold_italic_53d5a4d61eda510ddc454fa1cb2e05ef',
     'normal' => $fontDir . '/poppins_normal_c1b7381dfaadf37a84cf14d786076e6d',
-    '500' => $fontDir . '/poppins_500_3ab22c79a50a7416f996a1aba688428d',
-    '600' => $fontDir . '/poppins_600_270e18a84ac8b306c8f31abe1d0720fa',
-    'bold' => $fontDir . '/poppins_bold_7eb29046bc7eaf66b896ec27702d038b',
-  ),
-  'material icons' => array(
-    'normal' => $fontDir . '/material_icons_normal_83bc6ee6a7efe22e107f200c00947cd9',
   ),
 ) ?>

@@ -82,7 +82,7 @@
                             ])
 
                             <div class="col-md-4 form-group @if($errors->has('active')) has-error @endif">
-                                {{ html()->label($user::getAttrsTrans('active').'*', 'active')->class('control-label') }}
+                                {{ html()->label( __('Accede al back office').'*', 'Accede al back office')->class('control-label') }}
                                 <div class="radio">
                                     <label for="active_true">
                                         {{ html()->radio('active', (!is_null(old('active')) && old('active') == 1) || $user->active ? true : false, 1)->id('active_true')->disabled(!Auth::user()->can('change_active_status', \App\Models\Admin\User::class)) }}@lang('Yes')

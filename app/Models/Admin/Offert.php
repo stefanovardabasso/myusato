@@ -263,7 +263,7 @@ class Offert extends Model
 
         $rangeFilters = [];
         foreach ($filters as $index => $filter) {
-            if (str_ends_with($index, '_start')) {
+            if (strpos($index, '_start')) {
                 $newIndex = str_replace(['_start', '_end'], '', $index);
                 if (!isset($rangeFilters[$newIndex])) {
                     $rangeFilters[$newIndex] = ['start' => $filter];
@@ -271,7 +271,7 @@ class Offert extends Model
                     $rangeFilters[$newIndex]['start'] = $filter;
                 }
             }
-            if (str_ends_with($index, '_end')) {
+            if (strpos($index, '_end')) {
                 $newIndex = str_replace(['_start', '_end'], '', $index);
                 if (!isset($rangeFilters[$newIndex])) {
                     $rangeFilters[$newIndex] = ['end' => $filter];
@@ -458,7 +458,7 @@ class Offert extends Model
                     return !in_array($cod_question, $forbiddenCaracts);
                 })
                 ->filter(function ($filter, $cod_question) {
-                    return !(str_ends_with($cod_question, '_start') || str_ends_with($cod_question, '_end'));
+                    return !(strpos($cod_question, '_start') || strpos($cod_question, '_end'));
                 });
 
             foreach ($filtersWithCaracts as $filterCode => $values) {

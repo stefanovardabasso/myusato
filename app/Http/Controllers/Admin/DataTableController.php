@@ -17,16 +17,17 @@ class DataTableController extends Controller
     {
         $user = Auth::user();
         $targetTable = request('target_table');
-
         $tableParams = request('table_params');
-       // dd($tableParams);
-        $viewName = request('view_name') ?? 'Default';
+        $viewName = request('view_name');
+
         $user->update([
-            'settings->data_tables->' . $targetTable . '->views->' . $viewName => json_decode($tableParams, true),
-            'settings->data_tables->' . $targetTable . '->last_used_view' => $viewName,
+            'settings->data_tables->' . $targetTable . '->' . $viewName => $tableParams
         ]);
-        return redirect()->back()
-            ->with(['success' => __('Table view saved successfully!')]);
+
+        return response()->json([
+            'success' => true,
+            'message' => __('Table view saved successfully!'),
+        ]);
     }
 
     /**

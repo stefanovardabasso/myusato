@@ -25,6 +25,7 @@ class AuthServiceProvider extends ServiceProvider
         'App\Models\Admin\Report' => 'App\Policies\Admin\ReportPolicy',
         'App\Models\Admin\Permission' => 'App\Policies\Admin\PermissionPolicy',
         /* crud:create add policy */
+        'App\Models\Admin\Blocksoftext' => 'App\Policies\Admin\BlocksoftextPolicy',
         'App\Models\Admin\Vendorbadge' => 'App\Policies\Admin\VendorbadgePolicy',
         'App\Models\Admin\Tuttocarrelli' => 'App\Policies\Admin\TuttocarrelliPolicy',
         'App\Models\Admin\Suprlift' => 'App\Policies\Admin\SuprliftPolicy',

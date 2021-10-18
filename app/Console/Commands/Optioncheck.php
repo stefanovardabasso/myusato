@@ -42,8 +42,6 @@ class Optioncheck extends Command
         //0 -> attive
         //1 -> Scaduti
         //3 -> Assegnato
-
-
        $date_today= date('Y-m-d h:i:s');
         $options  = Option::query()
             ->where('status','=',0)

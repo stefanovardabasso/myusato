@@ -85,6 +85,7 @@ Route::group(['middleware' => ['auth', 'AccountActivated', 'locale', 'UserLastAc
 
 
     /* crud:create add resource route */
+    Route::resource('blocksoftexts', 'BlocksoftextController');
     Route::resource('vendorbadges', 'VendorbadgeController');
     Route::resource('tuttocarrellis', 'TuttocarrelliController');
     Route::resource('suprlifts', 'SuprliftController');
@@ -235,6 +236,7 @@ Route::group(['middleware' => ['auth', 'AccountActivated', 'locale', 'UserLastAc
         Route::post('reports', ['uses' => 'ReportController@datatable', 'as' => 'reports']);
 
         /* crud:create add datatable route */
+        Route::post('blocksoftexts', ['uses' => 'BlocksoftextController@datatable', 'as' => 'blocksoftexts']);
         Route::post('vendorbadges', ['uses' => 'VendorbadgeController@datatable', 'as' => 'vendorbadges']);
         Route::post('tuttocarrellis', ['uses' => 'TuttocarrelliController@datatable', 'as' => 'tuttocarrellis']);
         Route::post('suprlifts', ['uses' => 'SuprliftController@datatable', 'as' => 'suprlifts']);

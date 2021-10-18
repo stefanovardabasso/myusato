@@ -158,7 +158,7 @@
                   placeholder="{{__('Testo')}}" required=""
                   style="border: 1px solid;"></textarea>
         <input type="text" name="email" class="input mb-10 weight-500"
-               placeholder="{{ __('Email cliente') }}" required="" style="border: 1px solid;">
+               placeholder="{{ __('Email dove ricevere la quotazione') }}" required="" value="@if(Auth::check()) {{auth()->user()->email}}  @endif" style="border: 1px solid;">
 
 
         <div class="flex flex-wrap justify-center align-center">

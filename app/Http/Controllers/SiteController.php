@@ -61,28 +61,28 @@ class SiteController extends Controller
         $filterId = \request('filterId');
         $filterInfo = null;
         $productsCount = 0;
-        if (isset($filterId)) {
-            $filterInfo = $this->buttonsFilterModel->getFilterInfo($filterId);
-            $filterInfo->fam_selects = $filterInfo->famSelects->map(function ($f) {
-                $f->questions_filters = $f->questionsFilters->map(function ($qf) {
-
-                    if ($qf->cod_question === 'Marca_Selezione') {
-
-                        $brands = collect($this->productModel->getBrandsByFamilyCode($qf->cod_fam)->toArray())->flatten()->toArray();
-
-                        $brands = implode(';', $brands);
-
-                        $qf->values = $brands;
-                    }
-
-                    return $qf;
-                });
-            });
-
-            $productsCount = $this->productModel->getProductsCountByFilterButton($filterId);
-        } else {
-            return redirect()->route('filters', ['filterId' => 1]);
-        }
+//        if (isset($filterId)) {
+//            $filterInfo = $this->buttonsFilterModel->getFilterInfo($filterId);
+//            $filterInfo->fam_selects = $filterInfo->famSelects->map(function ($f) {
+//                $f->questions_filters = $f->questionsFilters->map(function ($qf) {
+//
+//                    if ($qf->cod_question === 'Marca_Selezione') {
+//
+//                        $brands = collect($this->productModel->getBrandsByFamilyCode($qf->cod_fam)->toArray())->flatten()->toArray();
+//
+//                        $brands = implode(';', $brands);
+//
+//                        $qf->values = $brands;
+//                    }
+//
+//                    return $qf;
+//                });
+//            });
+//
+//            $productsCount = $this->productModel->getProductsCountByFilterButton($filterId);
+//        } else {
+//            return redirect()->route('filters', ['filterId' => 1]);
+//        }
 
         $filterButtons = $this->buttonsFilterModel->getButtonFilters();
 
@@ -457,9 +457,9 @@ class SiteController extends Controller
 
         $off_check = Offert::query()->where('id',$offerId)->first();
 
-        if($off_check->target_user != $type_user_id || $off_check->status == 0){
-            return Redirect::to('/');
-        }
+//        if($off_check->target_user != $type_user_id || $off_check->status == 0){
+//            return Redirect::to('/');
+//        }
 
         $offerSelect = [
             'id',

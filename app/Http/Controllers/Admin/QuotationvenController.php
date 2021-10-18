@@ -13,11 +13,14 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Quotationvens_line;
 use App\Models\Admin\Relation_offert_product;
 use App\Models\Admin\Revision;
+use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\DataTables;
 use App\Models\Admin\Mymachine;
 use Illuminate\Support\Facades\Auth;
 use Barryvdh\DomPDF\Facade as PDF;
 use Mail;
+
+
 
 class QuotationvenController extends Controller
 {
@@ -191,7 +194,8 @@ class QuotationvenController extends Controller
             }
 
         }
-        $pdf='';
+
+        $pdf= '';
 
         $record = new Quotationven();
         $record->user_id = Auth::id();
@@ -200,6 +204,13 @@ class QuotationvenController extends Controller
         $record->email = \request('email');
         $record->filepdf = $pdf;
         $record->save();
+
+        $num_ram = rand(5, 15);
+        $hash_c = \auth()->user()->id.'_'.$num_ram.'_'.$record->id.''.uniqid(rand(), true);
+        $pdf=$hash_c.'.pdf';
+
+        $record->filepdf = $pdf;
+        $record->update();
 
         $pdf = PDF::loadView('site.export-templates.valutation', [
             'offerts' => $offert,
@@ -212,8 +223,10 @@ class QuotationvenController extends Controller
             'prices'=>$prices
         ]);
 
+
+
         $path = public_path('upload/');
-        $pdf->save($path . $record->id.'.pdf');
+        $pdf->save($path . $hash_c.'.pdf');
         $mycatalog = Mymachine::query()->where('id_user','=', Auth::id())->get();
 
         foreach ($mycatalog as $mac){
@@ -225,11 +238,11 @@ class QuotationvenController extends Controller
         }
             $email =  \request('email');
             $title = \request('title');
+
         $data = [
             'title' => \request('title'),
             'text' => \request('message'),
-            'id' => $record->id,
-
+            'id' => $hash_c,
         ];
 
 

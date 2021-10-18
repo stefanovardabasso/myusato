@@ -702,9 +702,10 @@
                                                             <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #222222;line-height: 100%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;font-family: Helvetica;font-size: 16px;text-align: left;">
                                                                    <!---contenido aqui -->
                                                                 <Center> <h3> {{$data['title']}} </h3></Center>
-                                                                <p class="ttu">  {{$data['text']}} </p><br><br> 
-
-                                                                           <center><a href="http://myusato.cls.it/upload/{{$data['id']}}.pdf"> {{__('Scarica')}}</a> </center>
+                                                                <p class="ttu">  {{$data['text']}} </p><br><br>
+<BR>
+                                                                           <center><a style="color: black" href="http://myusato.cls.it/upload/{{$data['id']}}.pdf"> {{__('Scarica')}}</a> </center>
+    <BR>
                                                             </td>
                                                         </tr>
                                                         </tbody></table>

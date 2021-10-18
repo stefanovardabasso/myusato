@@ -43,7 +43,7 @@
 @auth
     <?php
     $role = auth()->user()->getrole();
-    if( $role[0]->id == 2 | $role[0]->id == 1 | $role[0]->id == 5 | $role[0]->id == 8){
+    if($role[0]->id == 1 | $role[0]->id == 5 | $role[0]->id == 8){
         $check_op = new \App\Models\Admin\Offert();
     ?>
     @if(!$check_op->userHasOption($offerId))
@@ -52,8 +52,8 @@
     @else
         <center>
             <a href="a" id="choose-product-action"> <span style="background-color: #337ab7;display: inline; padding: .2em .6em .3em; font-size: 125%; font-weight: 700; line-height: 1; color: #fff; text-align: center; white-space: nowrap; vertical-align: baseline;border-radius: .25em;" class="label label-primary">
-            Macchina optzionata
-        </span></a> 
+            Macchina opzionata
+        </span></a>
         </center>
         <br>
             @endif
@@ -176,8 +176,12 @@
                 offerId
             },
             success:
+                setTimeout(function () {
 
-                window.location.replace("{{Request::url()}}")
+                        window.location.replace("{{Request::url()}}")
+
+                }, 3000),
+
 
         });
     }

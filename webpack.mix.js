@@ -24,6 +24,5 @@ mix.copyDirectory('resources/fonts/', 'public/fonts');
 mix.copyDirectory('resources/js/admin-panel/vendor/dataTables/lang/', 'public/js/admin-panel/vendor/dataTables/lang');
 
 mix.sass('resources/sass/app.scss', 'public/css/app.css');
-mix.sass('public/site/sass/main.scss', 'public/site/css/main.min.css');
 
 mix.js('resources/js/app.js', 'public/js/app.js').version().sourceMaps();

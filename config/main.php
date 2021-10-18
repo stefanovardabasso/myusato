@@ -13,7 +13,6 @@ return [
      */
     'available_languages' => [
         'en' => 'English',
-        'bg' => 'Bulgarian',
         'it' => 'Italian',
     ],
 
